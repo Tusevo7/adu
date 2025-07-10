@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno - Sistema Escolar PF Aduaneira</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aluno.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="Capture.png" alt="Logo PF">
+                <h3>Aluno</h3>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#inicio"><i class="icon-home"></i> Início</a></li>
+                    <li><a href="#notas"><i class="icon-grades"></i> Notas</a></li>
+                    <li><a href="#materiais"><i class="icon-materials"></i> Materiais</a></li>
+                    <li><a href="#horario"><i class="icon-schedule"></i> Horário</a></li>
+                    <li><a href="#disciplinas"><i class="icon-subjects"></i> Disciplinas</a></li>
+                    <li><a href="#frequencia"><i class="icon-attendance"></i> Frequência</a></li>
+                    <li><a href="#documentos"><i class="icon-documents"></i> Documentos</a></li>
+                    <li><a href="#mensagens"><i class="icon-messages"></i> Mensagens</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn-logout">Sair</button>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h2>Bem-vindo, <span id="studentName">Carlos Mendes</span></h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notifications">
+                        <i class="icon-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="perfil.png" alt="Perfil">
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- Seção Início -->
+                <section id="inicio" class="dashboard-section active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h3>Olá, Carlos Mendes</h3>
+                            <p>Bem-vindo ao seu portal educacional</p>
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">15.2</span>
+                                    <span class="stat-label">Média Geral</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">92%</span>
+                                    <span class="stat-label">Frequência</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="welcome-image">
+                            <img src="assets/student-illustration.png" alt="Ilustração">
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="grid-card upcoming-events">
+                            <h4><i class="icon-calendar"></i> Próximos Eventos</h4>
+                            <ul class="events-list">
+                                <li>
+                                    <div class="event-date">
+                                        <span class="day">15</span>
+                                        <span class="month">MAI</span>
+                                    </div>
+                                    <div class="event-info">
+                                        <h5>Avaliação de Legislação</h5>
+                                        <p>08:00 - 10:00 | Sala 12</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="event-date">
+                                        <span class="day">18</span>
+                                        <span class="month">MAI</span>
+                                    </div>
+                                    <div class="event-info">
+                                        <h5>Palestra de Fiscalização</h5>
+                                        <p>14:00 - 16:00 | Auditório</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="view-all">Ver todos os eventos</a>
+                        </div>
+
+                        <div class="grid-card recent-materials">
+                            <h4><i class="icon-download"></i> Materiais Recentes</h4>
+                            <ul class="materials-list">
+                                <li>
+                                    <div class="material-icon">
+                                        <i class="icon-pdf"></i>
+                                    </div>
+                                    <div class="material-info">
+                                        <h5>Aula 1 - Legislação</h5>
+                                        <p>Prof. Silva • 15/05</p>
+                                    </div>
+                                    <button class="btn-download">
+                                        <i class="icon-download"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="material-icon">
+                                        <i class="icon-doc"></i>
+                                    </div>
+                                    <div class="material-info">
+                                        <h5>Exercícios Resolvidos</h5>
+                                        <p>Prof. Andrade • 10/05</p>
+                                    </div>
+                                    <button class="btn-download">
+                                        <i class="icon-download"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <a href="#materiais" class="view-all">Ver todos os materiais</a>
+                        </div>
+
+                        <div class="grid-card grades-overview">
+                            <h4><i class="icon-grades"></i> Desempenho Acadêmico</h4>
+                            <div class="grades-summary">
+                                <div class="subject-grade">
+                                    <span class="subject">Legislação Aduaneira</span>
+                                    <div class="grade-bar">
+                                        <div class="grade-fill" style="width: 75%"></div>
+                                        <span class="grade-value">15.0</span>
+                                    </div>
+                                </div>
+                                <div class="subject-grade">
+                                    <span class="subject">Técnicas de Fiscalização</span>
+                                    <div class="grade-bar">
+                                        <div class="grade-fill" style="width: 85%"></div>
+                                        <span class="grade-value">17.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#notas" class="view-all">Ver detalhes das notas</a>
+                        </div>
+
+                        <div class="grid-card attendance-summary">
+                            <h4><i class="icon-attendance"></i> Frequência</h4>
+                            <div class="attendance-chart">
+                                <div class="chart-circle">
+                                    <div class="circle-progress" style="--progress: 92">
+                                        <span>92%</span>
+                                    </div>
+                                </div>
+                                <div class="attendance-details">
+                                    <div class="detail-item present">
+                                        <span class="count">46</span>
+                                        <span class="label">Presentes</span>
+                                    </div>
+                                    <div class="detail-item absent">
+                                        <span class="count">4</span>
+                                        <span class="label">Faltas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#frequencia" class="view-all">Ver registro completo</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção Notas -->
+                <section id="notas" class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Notas e Avaliações</h3>
+                        <div class="section-actions">
+                            <button class="btn-print">
+                                <i class="icon-printer"></i> Imprimir
+                            </button>
+                            <button class="btn-export">
+                                <i class="icon-download"></i> Exportar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grades-container">
+                        <div class="grades-summary-cards">
+                            <div class="summary-card">
+                                <div class="card-icon">
+                                    <i class="icon-grades"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Média Geral</h4>
+                                    <div class="grade-circle">
+                                        <span>15.2</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="summary-card">
+                                <div class="card-icon">
+                                    <i class="icon-progress"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Progresso</h4>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 76%"></div>
+                                        <span>76% do curso</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grades-details">
+                            <h4>Detalhes por Disciplina</h4>
+                            
+                            <div class="discipline-grades">
+                                <div class="discipline-card">
+                                    <div class="discipline-header">
+                                        <h5>Legislação Aduaneira</h5>
+                                        <span class="final-grade">Média: 15.0</span>
+                                    </div>
+                                    
+                                    <table class="evaluations-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Avaliação</th>
+                                                <th>Data</th>
+                                                <th>Peso</th>
+                                                <th>Nota</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Avaliação 1</td>
+                                                <td>15/05/2023</td>
+                                                <td>30%</td>
+                                                <td>15</td>
+                                                <td><span class="status-approved">Aprovado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Avaliação 2</td>
+                                                <td>30/05/2023</td>
+                                                <td>30%</td>
+                                                <td>16</td>
+                                                <td><span class="status-approved">Aprovado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Trabalho Prático</td>
+                                                <td>10/06/2023</td>
+                                                <td>40%</td>
+                                                <td>14</td>
+                                                <td><span class="status-approved">Aprovado</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="discipline-card">
+                                    <div class="discipline-header">
+                                        <h5>Técnicas de Fiscalização</h5>
+                                        <span class="final-grade">Média: 17.0</span>
+                                    </div>
+                                    
+                                    <table class="evaluations-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Avaliação</th>
+                                                <th>Data</th>
+                                                <th>Peso</th>
+                                                <th>Nota</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Prova Teórica</td>
+                                                <td>20/05/2023</td>
+                                                <td>50%</td>
+                                                <td>16</td>
+                                                <td><span class="status-approved">Aprovado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Prova Prática</td>
+                                                <td>05/06/2023</td>
+                                                <td>50%</td>
+                                                <td>18</td>
+                                                <td><span class="status-pending">Pendente</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção Materiais -->
+                <section id="materiais" class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Materiais Didáticos</h3>
+                        <div class="section-actions">
+                            <div class="search-box">
+                                <input type="text" placeholder="Buscar material...">
+                                <button><i class="icon-search"></i></button>
+                            </div>
+                            <button class="btn-filter">
+                                <i class="icon-filter"></i> Filtrar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filters-panel">
+                        <div class="filter-group">
+                            <label>Disciplina:</label>
+                            <select>
+                                <option>Todas</option>
+                                <option>Legislação Aduaneira</option>
+                                <option>Técnicas de Fiscalização</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Tipo:</label>
+                            <select>
+                                <option>Todos</option>
+                                <option>Aulas</option>
+                                <option>Exercícios</option>
+                                <option>Leituras</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Ordenar por:</label>
+                            <select>
+                                <option>Mais recentes</option>
+                                <option>Mais antigos</option>
+                                <option>Nome (A-Z)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="materials-grid">
+                        <div class="material-card">
+                            <div class="material-badge pdf">
+                                <i class="icon-pdf"></i>
+                                PDF
+                            </div>
+                            <div class="material-content">
+                                <h4>Introdução à Legislação Aduaneira</h4>
+                                <p class="material-meta">
+                                    <span><i class="icon-user"></i> Prof. Silva</span>
+                                    <span><i class="icon-calendar"></i> 15/05/2023</span>
+                                </p>
+                                <p class="material-desc">
+                                    Material introdutório sobre os principais conceitos da legislação aduaneira brasileira e internacional.
+                                </p>
+                                <div class="material-actions">
+                                    <button class="btn-preview">
+                                        <i class="icon-eye"></i> Visualizar
+                                    </button>
+                                    <button class="btn-download">
+                                        <i class="icon-download"></i> Baixar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="material-card">
+                            <div class="material-badge doc">
+                                <i class="icon-doc"></i>
+                                DOC
+                            </div>
+                            <div class="material-content">
+                                <h4>Exercícios Resolvidos - Fiscalização</h4>
+                                <p class="material-meta">
+                                    <span><i class="icon-user"></i> Prof. Andrade</span>
+                                    <span><i class="icon-calendar"></i> 10/05/2023</span>
+                                </p>
+                                <p class="material-desc">
+                                    Coleção de exercícios práticos sobre técnicas de fiscalização aduaneira com gabarito comentado.
+                                </p>
+                                <div class="material-actions">
+                                    <button class="btn-preview">
+                                        <i class="icon-eye"></i> Visualizar
+                                    </button>
+                                    <button class="btn-download">
+                                        <i class="icon-download"></i> Baixar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mais materiais... -->
+                    </div>
+
+                    <div class="pagination">
+                        <button class="btn-prev" disabled>
+                            <i class="icon-arrow-left"></i> Anterior
+                        </button>
+                        <div class="page-numbers">
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <button class="btn-next">
+                            Próxima <i class="icon-arrow-right"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Outras seções... -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/aluno.js"></script>
+</body>
+</html>

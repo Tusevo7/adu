@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Sistema Escolar PF Aduaneira</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo-pf-small.png" alt="Logo PF">
+                <h3>Administrador</h3>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#inicio"><i class="icon-home"></i> Início</a></li>
+                    <li><a href="#usuarios"><i class="icon-users"></i> Gestão de Usuários</a></li>
+                    <li><a href="#turmas"><i class="icon-classes"></i> Gestão de Turmas</a></li>
+                    <li><a href="#disciplinas"><i class="icon-subjects"></i> Gestão de Disciplinas</a></li>
+                    <li><a href="#calendario"><i class="icon-calendar"></i> Calendário Acadêmico</a></li>
+                    <li><a href="#relatorios"><i class="icon-reports"></i> Relatórios</a></li>
+                    <li><a href="#configuracoes"><i class="icon-settings"></i> Configurações do Sistema</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn-logout">Sair</button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h2>Painel de Administração</h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notifications">
+                        <i class="icon-bell"></i>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="perfil.png" alt="Perfil">
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <section id="inicio" class="dashboard-section active">
+                    <h3>Visão Geral do Sistema</h3>
+                    <div class="cards-container">
+                        <div class="card">
+                            <div class="card-icon bg-blue">
+                                <i class="icon-users"></i>
+                            </div>
+                            <div class="card-info">
+                                <h4>Total de Usuários</h4>
+                                <p>356</p>
+                                <small>25 novos este mês</small>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-icon bg-green">
+                                <i class="icon-students"></i>
+                            </div>
+                            <div class="card-info">
+                                <h4>Alunos</h4>
+                                <p>320</p>
+                                <small>20 ativos hoje</small>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-icon bg-orange">
+                                <i class="icon-teachers"></i>
+                            </div>
+                            <div class="card-info">
+                                <h4>Professores</h4>
+                                <p>30</p>
+                                <small>5 em treinamento</small>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-icon bg-red">
+                                <i class="icon-classes"></i>
+                            </div>
+                            <div class="card-info">
+                                <h4>Turmas</h4>
+                                <p>15</p>
+                                <small>3 novas este semestre</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="system-status">
+                        <h4>Status do Sistema</h4>
+                        <div class="status-cards">
+                            <div class="status-card bg-success">
+                                <i class="icon-database"></i>
+                                <p>Banco de Dados</p>
+                                <span>Online</span>
+                            </div>
+                            <div class="status-card bg-warning">
+                                <i class="icon-backup"></i>
+                                <p>Último Backup</p>
+                                <span>Ontem 23:00</span>
+                            </div>
+                            <div class="status-card bg-success">
+                                <i class="icon-performance"></i>
+                                <p>Desempenho</p>
+                                <span>Ótimo</span>
+                            </div>
+                            <div class="status-card bg-danger">
+                                <i class="icon-updates"></i>
+                                <p>Atualizações</p>
+                                <span>Disponíveis</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recent-activity">
+                        <h4>Atividade Recente</h4>
+                        <ul class="activity-list">
+                            <li>
+                                <div class="activity-icon">
+                                    <i class="icon-user-add"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <p>Novo aluno cadastrado - João Silva</p>
+                                    <small>Hoje 09:30</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="activity-icon">
+                                    <i class="icon-grade-update"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <p>Notas atualizadas - Turma ADF-2023</p>
+                                    <small>Ontem 17:45</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="usuarios" class="dashboard-section">
+                    <h3>Gestão de Usuários</h3>
+                    <!-- Conteúdo da gestão de usuários será carregado aqui -->
+                </section>
+                
+                <!-- Outras seções serão semelhantes -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/admin.js"></script>
+</body>
+</html>

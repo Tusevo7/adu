@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor - Sistema Escolar PF Aduaneira</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/professor.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo-pf-small.png" alt="Logo PF">
+                <h3>Professor</h3>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#inicio"><i class="icon-home"></i> Início</a></li>
+                    <li><a href="#turmas"><i class="icon-classes"></i> Turmas</a></li>
+                    <li><a href="#avaliacoes"><i class="icon-assessments"></i> Avaliações</a></li>
+                    <li><a href="#materiais"><i class="icon-materials"></i> Materiais</a></li>
+                    <li><a href="#diario"><i class="icon-journal"></i> Diário</a></li>
+                    <li><a href="#frequencia"><i class="icon-attendance"></i> Frequência</a></li>
+                    <li><a href="#mensagens"><i class="icon-messages"></i> Mensagens</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn-logout">Sair</button>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h2>Bem-vindo, <span id="teacherName">Prof. Silva</span></h2>
+                </div>
+                
+                <div class="header-right">
+                    <div class="notifications">
+                        <i class="icon-bell"></i>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="assets/default-avatar.png" alt="Perfil">
+                    </div>
+                </div>
+            </header>
+            
+            <div class="content">
+                <!-- Seção Início -->
+                <section id="inicio" class="dashboard-section active">
+                    <div class="welcome-banner">
+                        <div class="welcome-text">
+                            <h3>Olá, Professor Silva</h3>
+                            <p>Painel de controle do docente</p>
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">4</span>
+                                    <span class="stat-label">Turmas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">120</span>
+                                    <span class="stat-label">Alunos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">8</span>
+                                    <span class="stat-label">Avaliações</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="welcome-image">
+                            <img src="assets/teacher-illustration.png" alt="Ilustração">
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="grid-card upcoming-classes">
+                            <h4><i class="icon-calendar"></i> Próximas Aulas</h4>
+                            <ul class="classes-list">
+                                <li>
+                                    <div class="class-time">
+                                        <span class="time">08:00</span>
+                                        <span class="duration">2h</span>
+                                    </div>
+                                    <div class="class-info">
+                                        <h5>Legislação Aduaneira - Turma A</h5>
+                                        <p>Sala 12 | 15/05</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="class-time">
+                                        <span class="time">10:00</span>
+                                        <span class="duration">2h</span>
+                                    </div>
+                                    <div class="class-info">
+                                        <h5>Técnicas de Fiscalização - Turma B</h5>
+                                        <p>Laboratório 3 | 15/05</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#turmas" class="view-all">Ver todas as aulas</a>
+                        </div>
+
+                        <div class="grid-card pending-tasks">
+                            <h4><i class="icon-tasks"></i> Tarefas Pendentes</h4>
+                            <ul class="tasks-list">
+                                <li>
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task1">
+                                        <label for="task1"></label>
+                                    </div>
+                                    <div class="task-info">
+                                        <h5>Lançar notas - Avaliação 1</h5>
+                                        <p>Turma A • Prazo: 18/05</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="task-checkbox">
+                                        <input type="checkbox" id="task2">
+                                        <label for="task2"></label>
+                                    </div>
+                                    <div class="task-info">
+                                        <h5>Enviar material de apoio</h5>
+                                        <p>Turma B • Prazo: 16/05</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#" class="view-all">Ver todas as tarefas</a>
+                        </div>
+
+                        <div class="grid-card recent-materials">
+                            <h4><i class="icon-materials"></i> Materiais Recentes</h4>
+                            <ul class="materials-list">
+                                <li>
+                                    <div class="material-icon">
+                                        <i class="icon-pdf"></i>
+                                    </div>
+                                    <div class="material-info">
+                                        <h5>Aula 1 - Legislação</h5>
+                                        <p>Turma A • 15/05 • 24 downloads</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="material-icon">
+                                        <i class="icon-doc"></i>
+                                    </div>
+                                    <div class="material-info">
+                                        <h5>Exercícios Resolvidos</h5>
+                                        <p>Turma B • 10/05 • 32 downloads</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#materiais" class="view-all">Ver todos os materiais</a>
+                        </div>
+
+                        <div class="grid-card messages">
+                            <h4><i class="icon-messages"></i> Mensagens Recentes</h4>
+                            <ul class="messages-list">
+                                <li>
+                                    <div class="message-avatar">
+                                        <img src="assets/student-avatar1.png" alt="Aluno">
+                                    </div>
+                                    <div class="message-content">
+                                        <h5>Carlos Mendes</h5>
+                                        <p>Dúvida sobre o conteúdo da aula...</p>
+                                        <span class="message-time">2 horas atrás</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="message-avatar">
+                                        <img src="assets/student-avatar2.png" alt="Aluno">
+                                    </div>
+                                    <div class="message-content">
+                                        <h5>Ana Souza</h5>
+                                        <p>Enviei o trabalho com atraso...</p>
+                                        <span class="message-time">Ontem</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a href="#mensagens" class="view-all">Ver todas as mensagens</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção Turmas -->
+                <section id="turmas" class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Minhas Turmas</h3>
+                        <div class="section-actions">
+                            <button class="btn-new-class">
+                                <i class="icon-plus"></i> Nova Turma
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="classes-grid">
+                        <div class="class-card">
+                            <div class="class-header">
+                                <h4>Legislação Aduaneira - Turma A</h4>
+                                <span class="class-period">Manhã • 08:00-10:00</span>
+                            </div>
+                            <div class="class-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">30</span>
+                                    <span class="stat-label">Alunos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">12</span>
+                                    <span class="stat-label">Aulas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">92%</span>
+                                    <span class="stat-label">Frequência</span>
+                                </div>
+                            </div>
+                            <div class="class-actions">
+                                <button class="btn-view">
+                                    <i class="icon-eye"></i> Detalhes
+                                </button>
+                                <button class="btn-edit">
+                                    <i class="icon-edit"></i> Editar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="class-card">
+                            <div class="class-header">
+                                <h4>Técnicas de Fiscalização - Turma B</h4>
+                                <span class="class-period">Tarde • 14:00-16:00</span>
+                            </div>
+                            <div class="class-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">28</span>
+                                    <span class="stat-label">Alunos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">8</span>
+                                    <span class="stat-label">Aulas</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">88%</span>
+                                    <span class="stat-label">Frequência</span>
+                                </div>
+                            </div>
+                            <div class="class-actions">
+                                <button class="btn-view">
+                                    <i class="icon-eye"></i> Detalhes
+                                </button>
+                                <button class="btn-edit">
+                                    <i class="icon-edit"></i> Editar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção Avaliações -->
+                <section id="avaliacoes" class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Gestão de Avaliações</h3>
+                        <div class="section-actions">
+                            <button class="btn-new-evaluation">
+                                <i class="icon-plus"></i> Nova Avaliação
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="evaluations-tabs">
+                        <div class="tabs-header">
+                            <button class="tab-btn active" data-tab="pending">Pendentes</button>
+                            <button class="tab-btn" data-tab="completed">Concluídas</button>
+                            <button class="tab-btn" data-tab="all">Todas</button>
+                        </div>
+
+                        <div class="tabs-content">
+                            <div class="tab-pane active" id="pending">
+                                <div class="evaluation-card">
+                                    <div class="evaluation-info">
+                                        <h4>Avaliação 1 - Legislação Aduaneira</h4>
+                                        <p class="evaluation-meta">
+                                            <span><i class="icon-class"></i> Turma A</span>
+                                            <span><i class="icon-calendar"></i> 15/05/2023</span>
+                                            <span><i class="icon-students"></i> 30 alunos</span>
+                                        </p>
+                                        <div class="progress-container">
+                                            <div class="progress-info">
+                                                <span>Notas lançadas: 12/30</span>
+                                                <span>40% concluído</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 40%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-actions">
+                                        <button class="btn-grade">
+                                            <i class="icon-grades"></i> Lançar Notas
+                                        </button>
+                                        <button class="btn-edit">
+                                            <i class="icon-edit"></i> Editar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="completed">
+                                <!-- Conteúdo das avaliações concluídas -->
+                            </div>
+
+                            <div class="tab-pane" id="all">
+                                <!-- Todas as avaliações -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal de Lançamento de Notas -->
+                    <div id="gradeModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Lançar Notas - Avaliação 1</h4>
+                                <span class="close-modal">&times;</span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="grade-filters">
+                                    <div class="filter-group">
+                                        <label>Ordenar por:</label>
+                                        <select>
+                                            <option>Nome (A-Z)</option>
+                                            <option>Nome (Z-A)</option>
+                                            <option>Matrícula</option>
+                                        </select>
+                                    </div>
+                                    <div class="search-box">
+                                        <input type="text" placeholder="Buscar aluno...">
+                                        <button><i class="icon-search"></i></button>
+                                    </div>
+                                </div>
+
+                                <div class="grades-table-container">
+                                    <table class="grades-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Matrícula</th>
+                                                <th>Aluno</th>
+                                                <th>Nota (0-20)</th>
+                                                <th>Faltas</th>
+                                                <th>Status</th>
+                                                <th>Comentário</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>PF2023001</td>
+                                                <td>Carlos Mendes</td>
+                                                <td>
+                                                    <input type="number" min="0" max="20" step="0.1" value="15.5">
+                                                </td>
+                                                <td>1</td>
+                                                <td>
+                                                    <select>
+                                                        <option>Aprovado</option>
+                                                        <option>Reprovado</option>
+                                                        <option>Recuperação</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <button class="btn-comment">
+                                                        <i class="icon-comment"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <!-- Mais alunos... -->
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="btn-cancel">Cancelar</button>
+                                    <button class="btn-save">Salvar Notas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Seção Materiais -->
+                <section id="materiais" class="dashboard-section">
+                    <div class="section-header">
+                        <h3>Materiais Didáticos</h3>
+                        <div class="section-actions">
+                            <button class="btn-new-material">
+                                <i class="icon-plus"></i> Novo Material
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="upload-container">
+                        <div class="upload-steps">
+                            <div class="step active">1. Informações</div>
+                            <div class="step">2. Arquivos</div>
+                            <div class="step">3. Confirmação</div>
+                        </div>
+
+                        <form class="upload-form">
+                            <div class="form-section">
+                                <h4>Informações do Material</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Título*</label>
+                                        <input type="text" placeholder="Ex: Aula 1 - Introdução" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Disciplina*</label>
+                                        <select required>
+                                            <option value="">Selecione...</option>
+                                            <option>Legislação Aduaneira</option>
+                                            <option>Técnicas de Fiscalização</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Turma*</label>
+                                        <select required>
+                                            <option value="">Selecione...</option>
+                                            <option>Turma A - Manhã</option>
+                                            <option>Turma B - Tarde</option>
+                                            <option>Todas as Turmas</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tipo*</label>
+                                        <select required>
+                                            <option value="">Selecione...</option>
+                                            <option>Aula</option>
+                                            <option>Exercício</option>
+                                            <option>Material Complementar</option>
+                                            <option>Prova</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Descrição</label>
+                                    <textarea rows="4" placeholder="Descreva o conteúdo do material..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h4>Anexos</h4>
+                                <div class="file-upload">
+                                    <div class="upload-area" id="dropZone">
+                                        <i class="icon-upload"></i>
+                                        <p>Arraste e solte seus arquivos aqui</p>
+                                        <span>ou</span>
+                                        <button type="button" class="btn-browse">Selecione os arquivos</button>
+                                        <input type="file" id="fileInput" multiple style="display: none;">
+                                    </div>
+                                    <div class="file-list">
+                                        <div class="file-item">
+                                            <div class="file-info">
+                                                <i class="icon-pdf"></i>
+                                                <div>
+                                                    <p class="file-name">apostila-legislacao.pdf</p>
+                                                    <p class="file-size">2.4 MB</p>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-remove">
+                                                <i class="icon-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="upload-hint">Formatos aceitos: PDF, DOCX, PPTX, XLSX, ZIP (Tamanho máximo: 50MB)</p>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-cancel">Cancelar</button>
+                                <button type="submit" class="btn-submit">Enviar Material</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="materials-list">
+                        <h4>Materiais Enviados Recentemente</h4>
+                        <table class="materials-table">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Título</th>
+                                    <th>Disciplina</th>
+                                    <th>Turma</th>
+                                    <th>Downloads</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15/05/2023</td>
+                                    <td>Aula 1 - Introdução</td>
+                                    <td>Legislação Aduaneira</td>
+                                    <td>Turma A</td>
+                                    <td>24</td>
+                                    <td>
+                                        <button class="btn-action btn-view">
+                                            <i class="icon-eye"></i>
+                                        </button>
+                                        <button class="btn-action btn-edit">
+                                            <i class="icon-edit"></i>
+                                        </button>
+                                        <button class="btn-action btn-delete">
+                                            <i class="icon-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Mais materiais... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Outras seções... -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/professor.js"></script>
+</body>
+</html>

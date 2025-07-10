@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema Escolar PF Aduaneira</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="Capture.png" alt="Polícia Fiscal Aduaneira">
+            <h1>Sistema de Gestão Escolar</h1>
+        </div>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Matrícula/NIF</label>
+                <input type="text" id="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="userType">Tipo de Usuário</label>
+                <select id="userType" required>
+                    <option value="">Selecione...</option>
+                    <option value="aluno">Aluno</option>
+                    <option value="professor">Professor</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-login">Entrar</button>
+            
+            <div class="links">
+                <a href="#">Esqueci minha senha</a>
+            </div>
+        </form>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
